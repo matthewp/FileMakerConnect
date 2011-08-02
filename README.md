@@ -7,9 +7,10 @@ FileMakerConnect is an abstraction layer for dealing with FileMaker databases vi
 
     cmd.Select("Foo", "Bar", "Do", "Boo");
     cmd.From("MyTable");
-    cmd.Where("Boo", Conditions.Equals, "hoo");
-    cmd.Where("Bar", Conditions.GreaterThanOrEqualTo, 37);
+    cmd.Where("Boo", Condition.Equals, "hoo");
+    cmd.Where("Bar", Condition.GreaterThanOrEqualTo, 37);
     cmd.OrderBy("Foo", SortOrder.Descending);
+    cmd.OrderBy("Bar", SortOrder.Ascending);
 
     Foo foo = cmd.Execute().ExtractObject<Foo>();
 
