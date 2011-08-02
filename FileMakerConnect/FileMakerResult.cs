@@ -18,11 +18,13 @@ namespace FileMakerConnect
         #region Methods
         public T ExtractObject<T>()
         {
+            // TODO Implement
             throw new NotImplementedException();
         }
 
         public T[] ExtractObjects<T>()
         {
+            // TODO Implement
             throw new NotImplementedException();
         }
         #endregion

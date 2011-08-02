@@ -11,8 +11,8 @@ namespace FileMakerConnect
         private bool disposed = false;
         private bool disposeConnect = false;
         protected FileMakerConnect _connect;
-        protected string FromClause;
-        protected string WhereClause;
+        protected string FromClause { get; set; }
+        protected string WhereClause { get; set; }
         #endregion
 
         #region Constructors
@@ -89,8 +89,7 @@ namespace FileMakerConnect
 
         public void Where(string field, Condition condition, DateTime value)
         {
-            // TODO Special formating is necessary for dates.
-            throw new NotImplementedException();
+            Where(field, condition, value.ToString("MM/dd/yy"));
         }
 
         public void Where(string field, Condition condition, Double value)
@@ -150,10 +149,13 @@ namespace FileMakerConnect
             {
                 Clear();
 
-                if (_connect != null)
+                if (disposeConnect)
                 {
-                    _connect.Dispose();
-                    _connect = null;
+                    if (_connect != null)
+                    {
+                        _connect.Dispose();
+                        _connect = null;
+                    }
                 }
 
                 disposed = true;

@@ -55,8 +55,7 @@ namespace FileMakerConnect
 
         public void Set(string field, DateTime value)
         {
-            // TODO Special formating for DateTime values.
-            throw new NotImplementedException();
+            Set(field, value.ToString("MM/dd/yy"));
         }
 
         public void Set(string field, Double value)

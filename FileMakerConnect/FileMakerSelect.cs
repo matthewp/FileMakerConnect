@@ -13,8 +13,8 @@ namespace FileMakerConnect
         #endregion
 
         #region Properties
-        public string SelectClause;
-        public string OrderByClause;
+        public string SelectClause { get; set; }
+        public string OrderByClause { get; set; }
         #endregion
 
         #region Constructors
