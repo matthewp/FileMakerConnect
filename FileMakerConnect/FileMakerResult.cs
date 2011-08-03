@@ -18,8 +18,26 @@ namespace FileMakerConnect
         #region Methods
         public T ExtractObject<T>()
         {
-            // TODO Implement
-            throw new NotImplementedException();
+			try
+            {
+                if (ResultSet.Rows.Count > 0)
+                {
+                    T obj = new T();
+                    DataRow row = ResultSet.Rows[0];
+                    Type type = typeof(T);
+
+                    PropertyInfo[] properties = type.GetProperties();
+
+                    foreach (DataColumn column in ResultSet.Columns)
+                    {
+                        PropertyInfo property = properties.FirstOrDefault(a => a.Name == column.ColumnName);
+                        if (property != null)
+                            property.SetValue(obj, row[column], null);
+                    }
+
+                    return obj;
+                }
+                else { return default(T); }
         }
 
         public T[] ExtractObjects<T>()
