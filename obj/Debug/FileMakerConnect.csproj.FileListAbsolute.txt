@@ -1,0 +1,20 @@
+C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\FileMakerConnect\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\FileMakerConnect\bin\Debug\FileMakerConnect.pdb
+C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\FileMakerConnect\obj\Debug\FileMakerConnect.pdb
+C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\FileMakerConnect\bin\Debug\FileMakerConnect.dll
+C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\FileMakerConnect\obj\Debug\FileMakerConnect.dll
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\FileMakerConnect\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\FileMakerConnect\obj\Debug\FileMakerConnect.pdb
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\FileMakerConnect\bin\Debug\FileMakerConnect.dll
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\FileMakerConnect\bin\Debug\FileMakerConnect.pdb
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\FileMakerConnect\obj\Debug\FileMakerConnect.dll
+C:\Users\Matthew\Documents\TrafficBuilders\Source\Libraries\FileMakerConnect\bin\Debug\FileMakerConnect.dll
+C:\Users\Matthew\Documents\TrafficBuilders\Source\Libraries\FileMakerConnect\bin\Debug\FileMakerConnect.pdb
+C:\Users\Matthew\Documents\TrafficBuilders\Source\Libraries\FileMakerConnect\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Matthew\Documents\TrafficBuilders\Source\Libraries\FileMakerConnect\obj\Debug\FileMakerConnect.dll
+C:\Users\Matthew\Documents\TrafficBuilders\Source\Libraries\FileMakerConnect\obj\Debug\FileMakerConnect.pdb
+C:\Documents and Settings\jkaderi\Desktop\REV Source\Libraries\FileMakerConnect\bin\Debug\FileMakerConnect.dll
+C:\Documents and Settings\jkaderi\Desktop\REV Source\Libraries\FileMakerConnect\bin\Debug\FileMakerConnect.pdb
+C:\Documents and Settings\jkaderi\Desktop\REV Source\Libraries\FileMakerConnect\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\jkaderi\Desktop\REV Source\Libraries\FileMakerConnect\obj\Debug\FileMakerConnect.dll
+C:\Documents and Settings\jkaderi\Desktop\REV Source\Libraries\FileMakerConnect\obj\Debug\FileMakerConnect.pdb
