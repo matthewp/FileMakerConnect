@@ -5,3 +5,10 @@ C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\TestFMConnect\
 C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\TestFMConnect\obj\Debug\TestFMConnect.dll
 C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\TestFMConnect\obj\Debug\TestFMConnect.pdb
 C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\TestFMConnect\bin\Debug\FileMakerConnect.dll
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\TestFMConnect\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\TestFMConnect\obj\Debug\TestFMConnect.pdb
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\TestFMConnect\bin\Debug\TestFMConnect.dll
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\TestFMConnect\bin\Debug\TestFMConnect.pdb
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\TestFMConnect\bin\Debug\FileMakerConnect.dll
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\TestFMConnect\bin\Debug\FileMakerConnect.pdb
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\TestFMConnect\obj\Debug\TestFMConnect.dll

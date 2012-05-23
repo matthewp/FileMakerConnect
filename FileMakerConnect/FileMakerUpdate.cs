@@ -94,7 +94,7 @@ namespace FileMakerConnect
 
         public void Execute()
         {
-            _connect.ExecuteNotQuery(BuildOutputString());
+            _connect.ExecuteNonQuery(BuildOutputString(), GetParameters());
         }
         #endregion
     }

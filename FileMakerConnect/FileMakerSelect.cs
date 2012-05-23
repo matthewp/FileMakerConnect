@@ -97,7 +97,7 @@ namespace FileMakerConnect
         /// <returns>A FileMakerResult object containing the result set.</returns>
         public FileMakerResult Execute()
         {
-            DataTable table = _connect.ExecuteDataTable(BuildOutputString());
+            DataTable table = _connect.ExecuteDataTable(BuildOutputString(), GetParameters());
 
             FileMakerResult result = new FileMakerResult();
             result.ResultSet = table;

@@ -3,3 +3,8 @@ C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\FileMakerConne
 C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\FileMakerConnect\obj\Debug\FileMakerConnect.pdb
 C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\FileMakerConnect\bin\Debug\FileMakerConnect.dll
 C:\Users\MaPhillips\Documents\My Work\Playground\FileMakerConnect\FileMakerConnect\obj\Debug\FileMakerConnect.dll
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\FileMakerConnect\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\FileMakerConnect\obj\Debug\FileMakerConnect.pdb
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\FileMakerConnect\bin\Debug\FileMakerConnect.dll
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\FileMakerConnect\bin\Debug\FileMakerConnect.pdb
+C:\Users\Matthew\Documents\Projects\FileMakerConnect\FileMakerConnect\obj\Debug\FileMakerConnect.dll

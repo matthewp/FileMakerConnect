@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace FileMakerConnect
@@ -16,9 +17,9 @@ namespace FileMakerConnect
         #endregion
 
         #region Methods
-        public T ExtractObject<T>()
+        public T ExtractObject<T>() where T : new()
         {
-			try
+            try
             {
                 if (ResultSet.Rows.Count > 0)
                 {
@@ -38,6 +39,11 @@ namespace FileMakerConnect
                     return obj;
                 }
                 else { return default(T); }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public T[] ExtractObjects<T>()

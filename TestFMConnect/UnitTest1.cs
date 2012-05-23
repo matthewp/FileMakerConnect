@@ -18,6 +18,7 @@ namespace TestFMConnect
             cmd.From("MyDB");
             cmd.Where("Foo", Condition.Equals, 37);
             cmd.Where("Bar", Condition.GreaterThan, "something");
+            cmd.Where("Loren", Condition.IsNull);
             cmd.OrderBy("Doo", SortOrder.Descending);
             cmd.OrderBy("Foo", SortOrder.Ascending);
 

@@ -18,3 +18,8 @@ C:\Documents and Settings\jkaderi\Desktop\REV Source\Libraries\FileMakerConnect\
 C:\Documents and Settings\jkaderi\Desktop\REV Source\Libraries\FileMakerConnect\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\jkaderi\Desktop\REV Source\Libraries\FileMakerConnect\obj\Debug\FileMakerConnect.dll
 C:\Documents and Settings\jkaderi\Desktop\REV Source\Libraries\FileMakerConnect\obj\Debug\FileMakerConnect.pdb
+C:\Source\Libraries\FileMakerConnect\bin\Debug\FileMakerConnect.dll
+C:\Source\Libraries\FileMakerConnect\bin\Debug\FileMakerConnect.pdb
+C:\Source\Libraries\FileMakerConnect\obj\Debug\ResolveAssemblyReference.cache
+C:\Source\Libraries\FileMakerConnect\obj\Debug\FileMakerConnect.dll
+C:\Source\Libraries\FileMakerConnect\obj\Debug\FileMakerConnect.pdb

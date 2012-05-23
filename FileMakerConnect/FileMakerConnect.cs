@@ -34,35 +34,45 @@ namespace FileMakerConnect
         public FileMakerConnect(string connectionString) : this()
         {
             ConnectionString = connectionString;
+            _connection.ConnectionString = ConnectionString;
         }
         #endregion
 
         #region Methods
-        public DataTable ExecuteDataTable(string sql)
+        public DataTable ExecuteDataTable(string sql, OdbcParameter[] parameters)
         {
             DataTable table = new DataTable();
 
             _command.CommandText = sql;
+            if (parameters != null && parameters.Length > 0)
+                _command.Parameters.AddRange(parameters);
+
             _adapter.Fill(table);
 
             return table;
         }
 
-        public void ExecuteNotQuery(string sql)
+        public void ExecuteNonQuery(string sql, OdbcParameter[] parameters)
         {
             _command.CommandText = sql;
+            if (parameters != null && parameters.Length > 0)
+                _command.Parameters.AddRange(parameters);
             _command.ExecuteNonQuery();
         }
 
-        public object ExecuteScalar(string sql)
+        public object ExecuteScalar(string sql, OdbcParameter[] parameters)
         {
             _command.CommandText = sql;
+            if (parameters != null && parameters.Length > 0)
+                _command.Parameters.AddRange(parameters);
             return _command.ExecuteScalar();
         }
 
-        public T ExecuteScalar<T>(string sql)
+        public T ExecuteScalar<T>(string sql, OdbcParameter[] parameters)
         {
             _command.CommandText = sql;
+            if (parameters != null && parameters.Length > 0)
+                _command.Parameters.AddRange(parameters);
             return (T)_command.ExecuteScalar();
         }
         #endregion

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Odbc;
 using System.Linq;
 using System.Text;
 
@@ -10,6 +11,7 @@ namespace FileMakerConnect
         #region Private variables
         private bool disposed = false;
         private bool disposeConnect = false;
+        private List<OdbcParameter> _parameters;
         protected FileMakerConnect _connect;
         protected string FromClause { get; set; }
         protected string WhereClause { get; set; }
@@ -20,11 +22,13 @@ namespace FileMakerConnect
         {
             _connect = new FileMakerConnect(connectionString);
             disposeConnect = true;
+            _parameters = new List<OdbcParameter>();
         }
 
         public FileMakerCommand(FileMakerConnect connect)
         {
             _connect = connect;
+			_parameters = new List<OdbcParameter>();
         }
         #endregion
 
@@ -58,6 +62,23 @@ namespace FileMakerConnect
         /// and the predicates will be added to the tail.
         /// </summary>
         /// <param name="field">The field you wish to match against.</param>
+        /// <param name="condition">What condition you want to check. Must be either IS NULL or IS NOT NULL</param>
+        public void Where(string field, Condition condition)
+        {
+            if (condition != Condition.IsNull && condition != Condition.IsNotNull)
+                throw new ArgumentOutOfRangeException("Only conditions IsNull or IsNotNull are value without a value");
+
+            if (String.IsNullOrEmpty(WhereClause))
+                Where(field, condition, "NULL", Operator.None);
+            else
+                Where(field, condition, "NULL", Operator.And);
+        }
+
+        /// <summary>
+        /// Add a predicate to the WHERE clause of this command. This method can be called multiple times
+        /// and the predicates will be added to the tail.
+        /// </summary>
+        /// <param name="field">The field you wish to match against.</param>
         /// <param name="condition">What condition you want to check.</param>
         /// <param name="value">The value you wish to check for.</param>
         /// <param name="oper">If this is a subsequent predicate, whether this is an AND or OR addition.</param>
@@ -71,15 +92,15 @@ namespace FileMakerConnect
             else
                 WhereClause += "WHERE";
 
-            string format = null;
-            if (condition == Condition.IsNull || condition == Condition.IsNotNull)
-                format = " \"{0}\" {1} {2}";
-            else
-                format = " \"{0}\" {1} \"{2}\"";
-
             string conStr = GetConditionString(condition);
 
-            WhereClause += String.Format(format, field, conStr, value);
+            if (condition == Condition.WithoutValue)
+                WhereClause += String.Format(" \"{0}\" {1} {2}", field, conStr, value);
+            else
+            {
+                WhereClause += String.Format(" \"{0}\" {1} \"@{2}\"", field, conStr, field);
+                AddParameter(field, value);
+            }
         }
 
         public void Where(string field, Condition condition, int value)
@@ -89,7 +110,7 @@ namespace FileMakerConnect
 
         public void Where(string field, Condition condition, DateTime value)
         {
-            Where(field, condition, value.ToString("MM/dd/yy"));
+            Where(field, condition, value.ToString("M/d/yy"));
         }
 
         public void Where(string field, Condition condition, Double value)
@@ -139,6 +160,17 @@ namespace FileMakerConnect
                     throw new ArgumentOutOfRangeException("condition", 
                         String.Format("Condition {0} is not supported.", condition));
             }
+        }
+
+        protected void AddParameter(string parameter, string value)
+        {
+            OdbcParameter param = new OdbcParameter("@" + parameter, value);
+            _parameters.Add(param);
+        }
+
+        protected OdbcParameter[] GetParameters()
+        {
+            return _parameters.ToArray();
         }
         #endregion
 

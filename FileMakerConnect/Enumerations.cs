@@ -9,7 +9,8 @@
         LessThan,
         LessThanOrEqualTo,
         IsNull,
-        IsNotNull
+        IsNotNull,
+        WithoutValue = IsNull|IsNotNull
     }
 
     public enum Operator
